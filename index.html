@@ -148,15 +148,14 @@
 							<span class="image main">
 								<img src="images/pic03.jpg" alt=""/>
 							</span>
-							<p>
-								<b>Teaching:</b>
-							</p>
-							<p>
-								<b>Outreach: I have been involved in several </b>
-							</p>
-							<p>
-								<b>Equity & Inclusion:</b>
-							</p>
+							<h2>Recent Blog Posts</h2>
+								<ul>
+  									{% for post in site.posts %}
+    									<li>
+      										<a href="{{ post.url }}">{{ post.title }}</a>
+    									</li>
+  								{% endfor %}
+								</ul>
 						</article>
 
 						<!-- Here is a the "Contact" card. -->
