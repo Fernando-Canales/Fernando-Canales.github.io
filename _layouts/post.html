@@ -6,29 +6,98 @@
     <title>{{ page.title }} - Fernando Gutierrez Canales</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1b1f23;
+            color: #e1e4e8;
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            font-size: 16pt;
+            line-height: 1.8;
+        }
+        
+        .post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 0.5rem;
+        }
+        
+        .post-meta {
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        hr {
+            margin: 3rem 0;
+            border: 0;
+            border-top: 1px solid #30363d;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            border-bottom: 1px dotted #58a6ff;
+        }
+        
+        a:hover {
+            color: #79c0ff;
+            border-bottom: 1px solid #79c0ff;
+        }
+        
+        code {
+            background: #161b22;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        pre {
+            background: #161b22;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
-<body class="is-preload">
-    <div id="wrapper">
-        <div id="main">
-            <article class="active">
-                <h2 class="major">{{ page.title }}</h2>
-                <span class="post-meta">{{ page.date | date: "%B %d, %Y" }}</span>
-                
-                {{ content }}
-                
-                <hr>
-                <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
-            </article>
-        </div>
+<body>
+    <div class="post-container">
+        <h2>{{ page.title }}</h2>
+        <span class="post-meta">{{ page.date | date: "%B %d, %Y" }}</span>
+        
+        {{ content }}
+        
+        <hr>
+        <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
     </div>
-    <div id="bg"></div>
-    
-    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
