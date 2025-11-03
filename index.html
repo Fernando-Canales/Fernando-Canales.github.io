@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE HTML>
 <!--
 	Dimension by HTML5 UP
@@ -150,18 +153,22 @@
 
 						<!-- Here is the "Community" card. -->
 						<article id="notes">
-							<h2 class="major">Notes</h2>
-							<span class="image main">
-								<img src="images/pic03.jpg" alt=""/>
-							</span>
-							<ul>
-								{% for post in site.posts %}
-								<li>
-									<a href="{{ post.url }}">{{ post.title }}</a>
-								</li>
-								{% endfor %}
-							</ul>
-
+    						<h2 class="major">Notes</h2>
+    						<span class="image main">
+        						<img src="images/pic03.jpg" alt=""/>
+    						</span>
+    						{% if site.posts.size > 0 %}
+    						<ul>
+        						{% for post in site.posts %}
+        						<li>
+            						<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            						<span class="post-date"> - {{ post.date | date: "%B %d, %Y" }}</span>
+        						</li>
+        						{% endfor %}
+    						</ul>
+    						{% else %}
+    						<p>No posts yet. Check back soon!</p>
+   							{% endif %}
 						</article>
 
 						<!-- Here is a the "Contact" card. -->
