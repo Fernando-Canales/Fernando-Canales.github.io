@@ -1,28 +1,12 @@
-Copy code
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <!-- Add any additional meta tags, stylesheets, or scripts here -->
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
     <h1>{{ page.title }}</h1>
-    <p>Published on {{ page.date | date: "%B %d, %Y" }}</p>
-  </header>
-
-  <!-- Post Content -->
-  <article>
+    <p><a href="/">← Back to home</a></p>
     {{ content }}
-  </article>
-
-  <!-- Footer -->
-  <footer>
-    <!-- Add any footer content or links here -->
-  </footer>
-
-</body>
+  </body>
 </html>
