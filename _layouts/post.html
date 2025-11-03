@@ -1,12 +1,34 @@
-<!DOCTYPE html>
+---
+---
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    <h1>{{ page.title }}</h1>
-    <p><a href="/">← Back to home</a></p>
-    {{ content }}
-  </body>
+<head>
+    <title>{{ page.title }} - Fernando Gutierrez Canales</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <article class="active">
+                <h2 class="major">{{ page.title }}</h2>
+                <span class="post-meta">{{ page.date | date: "%B %d, %Y" }}</span>
+                
+                {{ content }}
+                
+                <hr>
+                <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+            </article>
+        </div>
+    </div>
+    <div id="bg"></div>
+    
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
 </html>
