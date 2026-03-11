@@ -1,0 +1,32 @@
+global:
+  title: "fernandito"
+  main_heading: "Fernando Gutierrez Canales"
+  main_intro: "Doctor en Astrofísica | Científico de Datos | Escritor"
+  cv_link: "Currículum"
+  nav:
+    about: "Sobre mí"
+    research: "Investigación"
+    notes: "Notas"
+    contact: "Contacto"
+  footer:
+    copyright: "&copy; Untitled. Diseño: <a href=\"https://html5up.net\">HTML5 UP</a>."
+
+about:
+  section_title: "Sobre mí"
+  education: "**Educación:** Tengo una licenciatura en Física de la Universidad de Guanajuato y una Maestría en Ciencias (Astrofísica) del Departamento de Astronomía de la misma universidad. Recientemente completé mi doctorado en Astrofísica. Se realizó en dos instituciones diferentes: el Laboratoire d'Instrumentation et de Recherche en Astrophysique ([LIRA](https://lira.observatoiredeparis.psl.eu/)) en el sitio de Meudon del Observatorio de París y el Max-Planck-Institut für Sonnensystemforschung ([MPS](https://www.mps.mpg.de/en)) en Göttingen."
+  research_interests: "**Intereses de Investigación:** Me interesa el descubrimiento y la caracterización de exoplanetas. Mi [trabajo de doctorado](https://cyu.hal.science/tel-05165095/) se centró en el uso de la llamada fotometría de doble apertura para descartar correctamente tránsitos planetarios falsos para la [misión espacial PLATO](https://www.esa.int/Science_Exploration/Space_Science/Plato)."
+  current_interests: "**Intereses Actuales:** Actualmente busco oportunidades en ciencia de datos en la industria. Me interesa especialmente aplicar mis habilidades en análisis de datos, aprendizaje automático y modelado estadístico para resolver problemas del mundo real. Estoy abierto a roles que me permitan aprovechar mi experiencia en Python, R y SQL para la toma de decisiones basada en datos. También me interesa explorar mi lado creativo a través de la escritura, ya sea en blogs, poesía o ficción. Me encanta llevar un diario y leer."
+  publications: "**Publicaciones:** [Aquí](https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Gutierrez%20Canales%2C%20F%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) hay un enlace de ADS con todas mis publicaciones (académicas) hasta ahora."
+
+research:
+  section_title: "Investigación"
+  body: "**Fotometría de doble apertura de PLATO**  \nLa fotometría de apertura se utiliza ampliamente en telescopios espaciales como una forma de extraer curvas de luz de tránsito. Para la misión espacial PLATO, muchos objetivos tendrán sus curvas de luz extraídas a bordo. Sin embargo, usar una sola apertura no es suficiente para ver si la curva de luz producida es realmente planetaria. Por lo tanto, usar una segunda apertura podría ser útil para distinguir la naturaleza de las curvas de luz para una parte considerable de las estrellas objetivo de PLATO. Mi trabajo durante el doctorado se dedicó a probar esta técnica. Desarrollé un simulador que crea curvas de luz realistas de PLATO con tránsitos planetarios y binarias eclipsantes contaminantes. Luego apliqué varios algoritmos de aprendizaje automático para clasificar las curvas de luz producidas. Los resultados fueron muy prometedores, mostrando que esta técnica funciona. Mi tesis doctoral se puede encontrar [aquí](https://theses.hal.science/tel-05165095)."
+
+notes:
+  section_title: "Notas"
+  no_posts: "Aún no hay publicaciones. ¡Vuelve pronto!"
+
+contact:
+  section_title: "Contacto"
+  email: "**Correo:** fernando.canales@obspm.fr"
+  address: "**Dirección:**"

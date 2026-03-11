@@ -1,0 +1,32 @@
+global:
+  title: "fernandito"
+  main_heading: "Fernando Gutierrez Canales"
+  main_intro: "Dr. in Astrophysics | Data Scientist | Writer"
+  cv_link: "Curriculum Vitae"
+  nav:
+    about: "About Me"
+    research: "Research"
+    notes: "Notes"
+    contact: "Contact"
+  footer:
+    copyright: "&copy; Untitled. Design: <a href=\"https://html5up.net\">HTML5 UP</a>."
+
+about:
+  section_title: "About Me"
+  education: "**Education:** I have a Physics degree from the University of Guanajuato and a Master's degree in Science (Astrophysics) from the Astronomy Department of the same University. I recently completed my PhD in Astrophysics. It took place in two different institutions: the Laboratoire d'Instrumentation et de Recherche en Astrophysique ([LIRA](https://lira.observatoiredeparis.psl.eu/)) at the Meudon site of Paris Observatory and the Max-Planck-Institut für Sonnensystemforschung ([MPS](https://www.mps.mpg.de/en)) in Göttingen."
+  research_interests: "**Research Interests:** I am interested in exoplanet discovery and characterisation. My [PhD work](https://cyu.hal.science/tel-05165095/) was focused on the use the so called double aperture photometry for correctly discarding false planetary transits for the [PLATO space mission](https://www.esa.int/Science_Exploration/Space_Science/Plato)."
+  current_interests: "**Current Interests:** I am currently looking for data science opportunities in the industry. I am particularly interested in applying my skills in data analysis, machine learning, and statistical modeling to solve real-world problems. I am open to roles that allow me to leverage my expertise in Python, R, and SQL for data-driven decision-making. I am also interested in exploring my creative side through writing, whether it be blogs, poetry or fiction. I love journaling and reading."
+  publications: "**Publications:** [Here](https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Gutierrez%20Canales%2C%20F%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) is an ADS link with all my (academic) publications so far!"
+
+research:
+  section_title: "Research"
+  body: "**PLATO Double-aperture Photometry**  \nAperture photometry is vastly used in space telescopes as a way to extract transit light curves. For PLATO space mission, a lot of targets will have their light curves extracted on-board. However, using a single aperture is not enough to see if the produced light curve is actually planetary. Therefore, using a second aperture could be helpful to distinguish the nature of the light curves for a considerable part of PLATO target stars. My work during my PhD was devoted to testing this technique. I developed a simulator that creates realistic PLATO light curves with planetary transits and contaminant eclipsing binaries. Then, I applied several machine learning algorithms to classify the produced light curves. The results were very promising, showing that this technique works. My PhD thesis can be found [here](https://theses.hal.science/tel-05165095)."
+
+notes:
+  section_title: "Notes"
+  no_posts: "No posts yet. Check back soon!"
+
+contact:
+  section_title: "Contact"
+  email: "**Email:** fernando.canales@obspm.fr"
+  address: "**Address:**"

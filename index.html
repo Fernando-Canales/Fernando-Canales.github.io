@@ -14,7 +14,7 @@
 	-->
 	<head>
 		<!-- This is the title of the page. It is the text that appears inside this pages tab in your web browser -->
-		<title>fernandito</title>
+		<title>{% t global.title %}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!-- 	This links to this page's CSS, which is contained in the folder assets/css and the file main.css.
@@ -42,9 +42,7 @@
 						<div class="content">
 							<div class="inner">
 								<!-- Here is a heading where you can put your name -->
-								<h1 data-i18n="main_heading">
-									Fernando Gutierrez Canales
-								</h1>
+								<h1>{% t global.main_heading %}</h1>
 								<!-- 	Here is an image where you can put a picture of you. 
 									You can change the width and height attributes below to change how large
 									your image is.
@@ -55,13 +53,11 @@
 								<!-- 	Here is a paragraph where you can put your position and institution, or
 									a short line about yourself.
 								-->
-								<p data-i18n="main_intro">
-									Dr. in Astrophysics | Data Scientist | Writer
-								</p>
+								{{ site.translations[site.lang].global.main_intro | markdownify }}
 								<!-- Here is a paragraph where you can put a link to your CV -->
 								<p>
 									<!-- Note you will want to change where this points to! -->
-									<a href="pdfs/CV_english.pdf" target="_blank" data-i18n="cv_link" data-i18n-attr="href">Curriculum Vitae</a>
+									<a href="pdfs/CV_english.pdf" target="_blank">{% t global.cv_link %}</a>
 								</p>
 							</div>
 						</div>
@@ -74,16 +70,16 @@
 									<!-- 	Note that this links to #about, which will move the page to wherever
 										the element with the id "about" exists.
 									-->
-									<a href="#about" data-i18n="nav_about">About Me</a>
+									<a href="#about">{% t global.nav.about %}</a>
 								</li>
 								<li>
-									<a href="#research" data-i18n="nav_research">Research</a>
+									<a href="#research">{% t global.nav.research %}</a>
 								</li>
 								<li>
-									<a href="#notes" data-i18n="nav_notes">Notes</a>
+									<a href="#notes">{% t global.nav.notes %}</a>
 								</li>
 								<li>
-									<a href="#contact" data-i18n="nav_contact">Contact</a>
+									<a href="#contact">{% t global.nav.contact %}</a>
 								</li>
 								<!-- 	You can add another button to your navigation menu by adding
 									another List Item with a link inside of it.
@@ -92,10 +88,14 @@
 									<a href="images/Astronomy.jpg">My CV</a>
 								</li> -->
 								<li class="language-selector">
-									<select id="langSelect" aria-label="Language">
-										<option value="en">English</option>
-										<option value="es">Español</option>
-									</select>
+									<ul class="lang-switcher">
+							{% assign default_lang = site.languages | first %}
+							{% for l in site.languages %}
+								<li{% if site.lang == l %} class="active"{% endif %}>
+									<a href="{{ site.baseurl_root }}{% unless l == default_lang %}/{{ l }}{% endunless %}{{ page.url }}">{{ l | upcase }}</a>
+								</li>
+							{% endfor %}
+						</ul>
 								</li>
 							</ul>
 						</nav>
@@ -107,62 +107,34 @@
 							button links to.
 						-->
 						<article id="about">
-							<h2 class="major" data-i18n="section_about_title">About Me</h2>
+							<h2 class="major">{% t about.section_title %}</h2>
 							<!-- Here is an image that you can customize for this page -->
 							<span class="image main">
 								<img src="images/Fernando_picture.JPG" alt=""/>
 							</span>
 							<!-- Here are three paragraphs where you can fill out information about yourself -->
-							<p>
-								<!-- Items contained in <b> tags are bolded! -->
-								<b>Education:</b> I have a Physics degree from the University of Guanjuato and a Master's degree in Science (Astrophysics)
-								 from the Astronomy Department of the same University. I recently completed my PhD in Astrophysics. It took place 
-								 in two different institutions: the Laboratoire d'Instumentation et de Recherche en Astrophysique <a href="https://lira.observatoiredeparis.psl.eu/">(LIRA)</a> at the Meudon site of Paris Observatory
-								and the Max-Planck-Institut für Sonnensystemforschung <a href="https://www.mps.mpg.de/en">(MPS)</a> in Göttingen. 
-							</p>
+							{{ site.translations[site.lang].about.education | markdownify }}
 
 					
-							<p>
-								<b>Research Interests:</b> I am interested in exoplanet discovery and characterisation. My <a href="https://cyu.hal.science/tel-05165095/">PhD work</a> was focused
-								on the use the so called double aperture photometry for correctly discarding
-								false planetary transits for the <a href="https://www.esa.int/Science_Exploration/Space_Science/Plato">PLATO space mission</a>.
-							</p>
+							{{ site.translations[site.lang].about.research_interests | markdownify }}
 
-							<p>
-								<b>Current Interests:</b> I am currently looking for data science opportunities in the industry. I am particularly interested in
-								applying my skills in data analysis, machine learning, and statistical modeling to solve real-world problems. 
-								I am open to roles that allow me to leverage my expertise in Python, R, and SQL for data-driven decision-making.
-								I am also interested in exploring my creative side through writing, wether it be blogs, poetry or fiction. I love journaling and reading
-							</p>
+							{{ site.translations[site.lang].about.current_interests | markdownify }}
 
-							<p>
-								<b>Publications:</b> <a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Gutierrez%20Canales%2C%20F%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Here</a> is an ADS link with all my (academic) publications so far!
-							</p>
+							{{ site.translations[site.lang].about.publications | markdownify }}
 						</article>
 
 						<!-- Here is the "Research" card. -->
 						<article id="research">
-							<h2 class="major" data-i18n="section_research_title">Research</h2>
+							<h2 class="major">{% t research.section_title %}</h2>
 							<span class="image main">
 								<img src="images/pic02.jpg" alt=""/>
 							</span>
-							<p>
-								<!-- 	A <br> tag puts in a break so that the text that follows it displays on
-									the next line.
-								-->
-								<b>PLATO Double-aperture Photometry</b><br> 
-								Aperture photometry is vastly used in space telescopes as a way to extract transit light curves. For PLATO space mission, a lot of targets will have
-								their light curves extracted on-board. However, using a single aperture is not enough to see if the produced light curve is actually planetary.
-								Therefore, using a second aperture could be helpful to distinguish the nature of the light curves for a considerable part of PLATO target stars. 
-								My work during my PhD was devoted to testing this technique. I developed a simulator that creates realistic PLATO light curves with planetary transits and contaminant eclipsing binaries.
-								Then, I applied several machine learning algorithms to classify the produced light curves. The results were very promising, showing that this technique. My PhD thesis
-								can be found <a href="https://theses.hal.science/tel-05165095">here</a>.
-							</p>
+						{{ site.translations[site.lang].research.body | markdownify }}
 						</article>
 
 						<!-- Here is the "Community" card. -->
 						<article id="notes">
-    						<h2 class="major" data-i18n="section_notes_title">Notes</h2>
+    						<h2 class="major">{% t notes.section_title %}</h2>
     						<span class="image main">
         						<img src="images/pic03.jpg" alt=""/>
     						</span>
@@ -176,13 +148,13 @@
         						{% endfor %}
     						</ul>
     						{% else %}
-    						<p>No posts yet. Check back soon!</p>
+    						<p>{% t notes.no_posts %}</p>
    							{% endif %}
 						</article>
 
 						<!-- Here is a the "Contact" card. -->
 						<article id="contact">
-							<h2 class="major" data-i18n="section_contact_title">Contact</h2>
+							<h2 class="major">{% t contact.section_title %}</h2>
 							<p> 
 								<b>Email: fernando.canales@obspm.fr</b> 
 							</p>
@@ -241,7 +213,7 @@
 						<!-- 	You can change "Untitled" to your name to show everyone that
 							this is your work.
 						-->
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">{{ site.translations[site.lang].global.footer.copyright | markdownify }}</p>
 					</footer>
 
 			</div>
@@ -259,7 +231,6 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/i18n.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>

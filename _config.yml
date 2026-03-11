@@ -32,3 +32,19 @@ theme: null
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# -----------------------------------------------------------------------------
+# Internationalization (via jekyll-multiple-languages-plugin)
+# -----------------------------------------------------------------------------
+plugins:
+  - jekyll-multiple-languages-plugin
+
+# Languages to build (first is default)
+languages: ["en", "es"]
+
+# By default, the default language is built at the root.
+# To force it into a subfolder (e.g. /en/), uncomment the next line.
+# default_locale_in_subfolder: true
+
+# Files/folders that should not be duplicated into each locale
+exclude_from_localizations: ["assets", "images", "pdfs"]
