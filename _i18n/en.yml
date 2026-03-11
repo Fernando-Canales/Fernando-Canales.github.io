@@ -32,8 +32,3 @@ contact:
   address: "**Dirección:**"
   social:
     facebook: "https://www.facebook.com/fernando.canales.3"
-
-<p>{{ site.translations[site.lang].contact.email | markdownify }}</p>
-<p>{{ site.translations[site.lang].contact.address | markdownify }}</p>
-
-<span class="label">{{ site.translations[site.lang].global.social.facebook }}</span>

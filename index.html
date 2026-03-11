@@ -155,33 +155,12 @@
 						<!-- Here is a the "Contact" card. -->
 						<article id="contact">
 							<h2 class="major">{% t contact.section_title %}</h2>
-							<p> 
-								<b>Email: fernando.canales@obspm.fr</b> 
-							</p>
-							<p> 
-								<b>Address:</b> 
-							</p>
-
-							<!-- 	Here are the fancy icons that link to your social media.
+					{{ site.translations[site.lang].contact.email | markdownify }}
+					{{ site.translations[site.lang].contact.address | markdownify }}
 								These icons are rendered using Font Awesome fonts, and you can find more icons
 								here: https://fontawesome.com/icons
 							-->
 							<ul class="icons">
-								<!-- The Twitter icon -->
-								<li>
-									<!-- 	Note that you need to change the link to point to your page.
-										Replace "#" with your Twitter profile page.
-									-->
-									<a href="#" class="icon fa-twitter">
-										<span class="label">Twitter</span>
-									</a>
-								</li>
-								<!-- The Facebook icon -->
-								<li>
-									<a href="#" class="icon fa-facebook">
-										<span class="label">Facebook</span>
-									</a>
-								</li>
 								<!-- The Instagram icon -->
 								<li>
 									<a href="#" class="icon fa-instagram">
