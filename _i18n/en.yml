@@ -27,6 +27,13 @@ notes:
   no_posts: "No posts yet. Check back soon!"
 
 contact:
-  section_title: "Contact"
-  email: "**Email:** fernando.canales@obspm.fr"
-  address: "**Address:**"
+  section_title: "Contacto"
+  email: "**Correo:** fernando.canales@obspm.fr"
+  address: "**Dirección:**"
+  social:
+    facebook: "https://www.facebook.com/fernando.canales.3"
+
+<p>{{ site.translations[site.lang].contact.email | markdownify }}</p>
+<p>{{ site.translations[site.lang].contact.address | markdownify }}</p>
+
+<span class="label">{{ site.translations[site.lang].global.social.facebook }}</span>
