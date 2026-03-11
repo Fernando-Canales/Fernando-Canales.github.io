@@ -1328,6 +1328,7 @@ button {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		align-items: center;
 		margin-bottom: 0;
 		list-style: none;
 		padding-left: 0;
