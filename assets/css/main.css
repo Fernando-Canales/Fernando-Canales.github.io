@@ -1655,19 +1655,21 @@ button {
 }
 
 .language-selector {
-	position: fixed;
-	top: 1.25rem;
-	right: 1.25rem;
-	z-index: 1000;
+	position: fixed !important;
+	top: 1.25rem !important;
+	right: 1.25rem !important;
+	z-index: 9999;
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 
 @media screen and (max-width: 480px) {
 	.language-selector {
-		top: 1rem;
-		right: 1rem;
+		top: 1rem !important;
+		right: 1rem !important;
 	}
 }
 
