@@ -42,7 +42,7 @@
 						<div class="content">
 							<div class="inner">
 								<!-- Here is a heading where you can put your name -->
-								<h1>
+								<h1 data-i18n="main_heading">
 									Fernando Gutierrez Canales
 								</h1>
 								<!-- 	Here is an image where you can put a picture of you. 
@@ -55,13 +55,13 @@
 								<!-- 	Here is a paragraph where you can put your position and institution, or
 									a short line about yourself.
 								-->
-								<p>
+								<p data-i18n="main_intro">
 									Dr. in Astrophysics | Data Scientist | Writer
 								</p>
 								<!-- Here is a paragraph where you can put a link to your CV -->
 								<p>
 									<!-- Note you will want to change where this points to! -->
-									<a href="pdfs/CV_english.pdf" target="_blank">Curriculum Vitae</a>
+									<a href="pdfs/CV_english.pdf" target="_blank" data-i18n="cv_link" data-i18n-attr="href">Curriculum Vitae</a>
 								</p>
 							</div>
 						</div>
@@ -74,16 +74,16 @@
 									<!-- 	Note that this links to #about, which will move the page to wherever
 										the element with the id "about" exists.
 									-->
-									<a href="#about">About Me</a>
+									<a href="#about" data-i18n="nav_about">About Me</a>
 								</li>
 								<li>
-									<a href="#research">Research</a>
+									<a href="#research" data-i18n="nav_research">Research</a>
 								</li>
 								<li>
-									<a href="#notes">Notes</a>
+									<a href="#notes" data-i18n="nav_notes">Notes</a>
 								</li>
 								<li>
-									<a href="#contact">Contact</a>
+									<a href="#contact" data-i18n="nav_contact">Contact</a>
 								</li>
 								<!-- 	You can add another button to your navigation menu by adding
 									another List Item with a link inside of it.
@@ -91,6 +91,12 @@
 								<!-- <li>
 									<a href="images/Astronomy.jpg">My CV</a>
 								</li> -->
+								<li class="language-selector">
+									<select id="langSelect" aria-label="Language">
+										<option value="en">English</option>
+										<option value="es">Español</option>
+									</select>
+								</li>
 							</ul>
 						</nav>
 					</header>
@@ -101,7 +107,7 @@
 							button links to.
 						-->
 						<article id="about">
-							<h2 class="major">About Me</h2>
+							<h2 class="major" data-i18n="section_about_title">About Me</h2>
 							<!-- Here is an image that you can customize for this page -->
 							<span class="image main">
 								<img src="images/Fernando_picture.JPG" alt=""/>
@@ -136,7 +142,7 @@
 
 						<!-- Here is the "Research" card. -->
 						<article id="research">
-							<h2 class="major">Research</h2>
+							<h2 class="major" data-i18n="section_research_title">Research</h2>
 							<span class="image main">
 								<img src="images/pic02.jpg" alt=""/>
 							</span>
@@ -156,7 +162,7 @@
 
 						<!-- Here is the "Community" card. -->
 						<article id="notes">
-    						<h2 class="major">Notes</h2>
+    						<h2 class="major" data-i18n="section_notes_title">Notes</h2>
     						<span class="image main">
         						<img src="images/pic03.jpg" alt=""/>
     						</span>
@@ -176,7 +182,7 @@
 
 						<!-- Here is a the "Contact" card. -->
 						<article id="contact">
-							<h2 class="major">Contact</h2>
+							<h2 class="major" data-i18n="section_contact_title">Contact</h2>
 							<p> 
 								<b>Email: fernando.canales@obspm.fr</b> 
 							</p>
@@ -253,6 +259,7 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/i18n.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>
