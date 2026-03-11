@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-
-source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
-
-gem "jekyll-multiple-languages-plugin", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "jekyll-multiple-languages-plugin"
+gem "jekyll-paginate"
