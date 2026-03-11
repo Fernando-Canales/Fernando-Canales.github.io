@@ -1655,12 +1655,20 @@ button {
 }
 
 .language-selector {
-	position: absolute;
+	position: fixed;
 	top: 1.25rem;
 	right: 1.25rem;
+	z-index: 1000;
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+	.language-selector {
+		top: 1rem;
+		right: 1rem;
+	}
 }
 
 .language-selector a {
