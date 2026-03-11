@@ -12,7 +12,6 @@
 //   4) fallback (default: en)
 //
 // You can force a language in JS via `window.setPageLanguage('es')`.
-
 (function () {
 	const STORAGE_KEY = 'lang';
 	const DEFAULT_LANG = 'en';
