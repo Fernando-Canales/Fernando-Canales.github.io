@@ -1,2 +1,3 @@
-# Fernando-Canales.github.io
-Github repository for hosting my personal webpage
+# Fernando's personal webpage
+
+This is te GitHub repository behind my [personal website](https://fernando-canales.github.io/). The website is useful to 
