@@ -53,48 +53,86 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             <p>Ahora estoy llevando esta potencia analítica al sector tecnológico corporativo. Ya sea construyendo dashboards interactivos en Tableau, desarrollando paquetes de Python de código abierto o utilizando pruebas A/B para optimizar operaciones de negocio, mi enfoque está en crear soluciones de datos que generen un impacto comercial medible.</p>
         </article>
 
-        <article id="projects">
-            <h2 class="major">Proyectos de Datos y Python</h2>
-            
-            <h3>Análisis de Ineficacia en Call Center y Pruebas de Hipótesis</h3>
-            <p>
-                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Estadística]</code> <code>[Tableau]</code><br />
-                <strong>El Desafío:</strong> Una empresa de telecomunicaciones necesitaba identificar a los operadores de call center con bajo rendimiento y comprender la causa raíz de la disminución en la calidad del servicio tras un pico masivo en el volumen de llamadas.<br />
-                <strong>La Solución y el Impacto:</strong> Diseñé una métrica de ineficacia personalizada analizando más de 50,000 registros y realicé pruebas de hipótesis estadísticas (Pruebas T). Demostré que los agentes etiquetados con "bajo rendimiento" manejaban el mismo volumen de llamadas que los mejores, lo que resultó en una recomendación estratégica de re-capacitación en lugar de despidos, ahorrando a la empresa significativos costos de rotación de personal.<br />
-                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/CallMeMaybe" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Dashboard en Tableau</a>
-            </p>
-            
-            <hr />
+<article id="projects">
+    <h2 class="major">Proyectos de Datos y Python</h2>
+    
+    <div class="project-grid">
 
-            <h3>Pipeline de Detección de Anomalías para la Misión PLATO de la ESA</h3>
-            <p>
-                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Data Pipelines]</code> <code>[Procesamiento de Señales]</code> <code>[Modelado Estadístico]</code><br />
-                <strong>El Desafío:</strong> La futura misión espacial PLATO de la Agencia Espacial Europea requería un método automatizado y de alta precisión para filtrar anomalías y "falsos positivos" de enormes flujos de datos de sensores fotométricos.<br />
-                <strong>La Solución y el Impacto:</strong> Diseñé y validé un algoritmo robusto de detección de anomalías mediante procesamiento de señales. Esta metodología fue adoptada oficialmente en el pipeline de datos de la misión para garantizar la integridad de los datos posteriores y resultó en una publicación científica como primer autor.<br />
-                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publicación Oficial</a>
-            </p>
-            
-            <hr />
+        <div class="project-card">
+            <img src="/images/project_callcenter.jpg" alt="Vista previa del Dashboard de Call Center">
+            <div class="project-content">
+                <h3>Análisis de Ineficacia en Call Center y Pruebas de Hipótesis</h3>
+                <p>
+                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Estadística]</code> <code>[Tableau]</code>
+                </p>
+                <p>
+                    <strong>El Desafío:</strong> Identificar a los operadores con bajo rendimiento y comprender la causa raíz de la disminución en la calidad del servicio tras un pico masivo en el volumen de llamadas.<br><br>
+                    <strong>La Solución:</strong> Diseñé una métrica de ineficacia analizando más de 50,000 registros y realicé pruebas de hipótesis (Pruebas T). Demostré que los agentes con "bajo rendimiento" manejaban el mismo volumen de llamadas que los mejores. Recomendé re-capacitación en lugar de despidos, ahorrando significativos costos de rotación.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank" rel="noreferrer">Repositorio en GitHub</a>
+                    <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Dashboard en Tableau</a>
+                </div>
+            </div>
+        </div>
 
-            <h3>Dashboard Interactivo de Análisis de Ventas de Automóviles (EDA)</h3>
-            <p>
-                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Visualización de Datos]</code> <code>[Render]</code><br />
-                <strong>El Desafío:</strong> Los stakeholders no técnicos necesitaban una forma intuitiva de explorar y extraer información valiosa de negocio a partir de un conjunto de datos complejo sobre ventas de automóviles en Estados Unidos.<br />
-                <strong>La Solución y el Impacto:</strong> Desarrollé y desplegué una aplicación web interactiva que permite a los usuarios realizar un Análisis Exploratorio de Datos (EDA) en tiempo real, mediante el uso de filtros dinámicos y visualizaciones automatizadas.<br />
-                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Aplicación Web</a>
-            </p>
-            
-            <hr />
+        <div class="project-card">
+            <img src="/images/project_plato.jpg" alt="Datos de la Misión Espacial PLATO">
+            <div class="project-content">
+                <h3>Pipeline de Detección de Anomalías para la Misión PLATO de la ESA</h3>
+                <p>
+                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Data Pipelines]</code> <code>[Procesamiento de Señales]</code>
+                </p>
+                <p>
+                    <strong>El Desafío:</strong> La futura misión espacial PLATO de la ESA requería un método automatizado y de alta precisión para filtrar "falsos positivos" de enormes flujos de datos de sensores fotométricos.<br><br>
+                    <strong>La Solución:</strong> Diseñé y validé un algoritmo robusto de detección de anomalías. Esta metodología fue adoptada oficialmente en el pipeline de datos de la misión para garantizar la integridad de los datos y resultó en una publicación científica como primer autor.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">Repositorio en GitHub</a>
+                    <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publicación Oficial</a>
+                </div>
+            </div>
+        </div>
 
-            <h3>Paquete Open-Source de Detección Planetaria (platos_closet)</h3>
-            <p>
-                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[PyPI Packaging]</code> <code>[NumPy]</code> <code>[Sphinx/ReadTheDocs]</code><br />
-                <strong>El Desafío:</strong> La comunidad astronómica necesitaba una herramienta ligera y de fácil acceso para evaluar matemáticamente si ciertos cuerpos planetarios cumplían con los umbrales de detección de señal a ruido de la misión PLATO.<br />
-                <strong>La Solución y el Impacto:</strong> Desarrollé, empaqueté y publiqué un paquete de Python de código abierto en PyPI (completamente documentado). La herramienta permite a los investigadores evaluar de forma limpia la detectabilidad de los planetas a través de un simple <code>pip install</code>.<br />
-                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a> | <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Documentación Oficial</a>
-            </p>
+        <div class="project-card">
+            <img src="/images/project_cars.jpg" alt="Dashboard EDA de Ventas de Autos">
+            <div class="project-content">
+                <h3>Dashboard Interactivo de Análisis de Ventas de Automóviles (EDA)</h3>
+                <p>
+                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Render]</code>
+                </p>
+                <p>
+                    <strong>El Desafío:</strong> Los stakeholders no técnicos necesitaban una forma intuitiva de explorar y extraer información valiosa de negocio a partir de un conjunto de datos complejo sobre ventas de automóviles.<br><br>
+                    <strong>La Solución:</strong> Desarrollé y desplegué una aplicación web interactiva que permite a los usuarios realizar un Análisis Exploratorio de Datos (EDA) en tiempo real, mediante el uso de filtros dinámicos y visualizaciones automatizadas.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">Repositorio en GitHub</a>
+                    <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Aplicación Web</a>
+                </div>
+            </div>
+        </div>
 
-        </article>
+        <div class="project-card">
+            <img src="/images/project_package.jpg" alt="Paquete Python platos_closet">
+            <div class="project-content">
+                <h3>Paquete Open-Source de Detección Planetaria (platos_closet)</h3>
+                <p>
+                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[PyPI]</code> <code>[NumPy]</code> <code>[Sphinx]</code>
+                </p>
+                <p>
+                    <strong>El Desafío:</strong> La comunidad astronómica necesitaba una herramienta ligera y accesible para evaluar matemáticamente si ciertos planetas cumplían con los umbrales de detección de la misión PLATO.<br><br>
+                    <strong>La Solución:</strong> Desarrollé, empaqueté y publiqué un paquete de Python de código abierto en PyPI. La herramienta permite a los investigadores evaluar la detectabilidad de los planetas a través de un simple <code>pip install</code>.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">Repositorio en GitHub</a>
+                    <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a>
+                    <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Documentación Oficial</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</article>
 
         <article id="research">
             <h2 class="major">Investigación Académica</h2>
