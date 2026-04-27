@@ -13,84 +13,149 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
-	<a href="/">EN</a>
-	<a href="/es/" class="active" aria-current="page">ES</a>
+    <a href="/">EN</a>
+    <a href="/es/" class="active" aria-current="page">ES</a>
 </div>
 <div id="wrapper">
-<header id="header">
-<div class="content">
-<div class="inner">
-<h1>Fernando Gutierrez Canales</h1>
-<img src="/images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando" />
-<p>Doctor en Astrofísica | Científico de Datos | Escritor</p>
-<p><a href="/pdfs/CV_spanish.pdf" target="_blank" rel="noreferrer">Currículum</a></p>
+
+    <header id="header">
+        <div class="content">
+            <div class="inner">
+                <h1>Fernando Gutiérrez-Canales</h1>
+                <img src="/images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
+                <p><strong>Analista de Datos y Desarrollador Python</strong> | Doctor en Astrofísica<br />
+                Transformando datos complejos en soluciones de negocio y valor medible.</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#research">Investigación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+
+        <article id="about">
+            <h2 class="major">Sobre mí</h2>
+            <span class="image main">
+                <img src="/images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
+            </span>
+            
+            <p>Soy un Analista de Datos y Desarrollador Python con un Doctorado en Astrofísica. Me especializo en extraer conclusiones de negocio a partir de conjuntos de datos masivos y complejos, utilizando Python, pruebas estadísticas avanzadas y herramientas modernas de visualización de datos.</p>
+            
+            <p>Durante mi doctorado, realizado entre el Observatorio de París y el Instituto Max Planck, desarrollé algoritmos de detección de anomalías de misión crítica para la misión espacial PLATO de la Agencia Espacial Europea. Este riguroso entorno académico me inculcó una profunda capacidad para resolver problemas altamente ambiguos, diseñar pipelines de datos robustos y escribir código listo para producción.</p>
+            
+            <p>Ahora estoy llevando esta potencia analítica al sector tecnológico corporativo. Ya sea construyendo dashboards interactivos en Tableau, desarrollando paquetes de Python de código abierto o utilizando pruebas A/B para optimizar operaciones de negocio, mi enfoque está en crear soluciones de datos que generen un impacto comercial medible.</p>
+        </article>
+
+        <article id="projects">
+            <h2 class="major">Proyectos de Datos y Python</h2>
+            
+            <h3>Análisis de Ineficacia en Call Center y Pruebas de Hipótesis</h3>
+            <p>
+                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Estadística]</code> <code>[Tableau]</code><br />
+                <strong>El Desafío:</strong> Una empresa de telecomunicaciones necesitaba identificar a los operadores de call center con bajo rendimiento y comprender la causa raíz de la disminución en la calidad del servicio tras un pico masivo en el volumen de llamadas.<br />
+                <strong>La Solución y el Impacto:</strong> Diseñé una métrica de ineficacia personalizada analizando más de 50,000 registros y realicé pruebas de hipótesis estadísticas (Pruebas T). Demostré que los agentes etiquetados con "bajo rendimiento" manejaban el mismo volumen de llamadas que los mejores, lo que resultó en una recomendación estratégica de re-capacitación en lugar de despidos, ahorrando a la empresa significativos costos de rotación de personal.<br />
+                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/CallMeMaybe" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Dashboard en Tableau</a>
+            </p>
+            
+            <hr />
+
+            <h3>Pipeline de Detección de Anomalías para la Misión PLATO de la ESA</h3>
+            <p>
+                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Data Pipelines]</code> <code>[Procesamiento de Señales]</code> <code>[Modelado Estadístico]</code><br />
+                <strong>El Desafío:</strong> La futura misión espacial PLATO de la Agencia Espacial Europea requería un método automatizado y de alta precisión para filtrar anomalías y "falsos positivos" de enormes flujos de datos de sensores fotométricos.<br />
+                <strong>La Solución y el Impacto:</strong> Diseñé y validé un algoritmo robusto de detección de anomalías mediante procesamiento de señales. Esta metodología fue adoptada oficialmente en el pipeline de datos de la misión para garantizar la integridad de los datos posteriores y resultó en una publicación científica como primer autor.<br />
+                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publicación Oficial</a>
+            </p>
+            
+            <hr />
+
+            <h3>Dashboard Interactivo de Análisis de Ventas de Automóviles (EDA)</h3>
+            <p>
+                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Visualización de Datos]</code> <code>[Render]</code><br />
+                <strong>El Desafío:</strong> Los stakeholders no técnicos necesitaban una forma intuitiva de explorar y extraer información valiosa de negocio a partir de un conjunto de datos complejo sobre ventas de automóviles en Estados Unidos.<br />
+                <strong>La Solución y el Impacto:</strong> Desarrollé y desplegué una aplicación web interactiva que permite a los usuarios realizar un Análisis Exploratorio de Datos (EDA) en tiempo real, mediante el uso de filtros dinámicos y visualizaciones automatizadas.<br />
+                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Aplicación Web</a>
+            </p>
+            
+            <hr />
+
+            <h3>Paquete Open-Source de Detección Planetaria (platos_closet)</h3>
+            <p>
+                <strong>Stack Tecnológico:</strong> <code>[Python]</code> <code>[PyPI Packaging]</code> <code>[NumPy]</code> <code>[Sphinx/ReadTheDocs]</code><br />
+                <strong>El Desafío:</strong> La comunidad astronómica necesitaba una herramienta ligera y de fácil acceso para evaluar matemáticamente si ciertos cuerpos planetarios cumplían con los umbrales de detección de señal a ruido de la misión PLATO.<br />
+                <strong>La Solución y el Impacto:</strong> Desarrollé, empaqueté y publiqué un paquete de Python de código abierto en PyPI (completamente documentado). La herramienta permite a los investigadores evaluar de forma limpia la detectabilidad de los planetas a través de un simple <code>pip install</code>.<br />
+                <strong>Enlaces:</strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">Repositorio en GitHub</a> | <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a> | <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Documentación Oficial</a>
+            </p>
+
+        </article>
+
+        <article id="research">
+            <h2 class="major">Investigación Académica</h2>
+            
+            <span class="image main"><img src="/images/plato_cosmos.jpeg" alt="Misión Espacial PLATO" /></span>
+            
+            <h3>Instrumentación Espacial y Exoplanetas</h3>
+            <p>Antes de hacer la transición al análisis de datos corporativo, mi carrera académica estuvo dedicada a la misión espacial <strong>PLATO</strong> de la Agencia Espacial Europea y al estudio de planetas extrasolares. Mi investigación se centró en el desarrollo de pipelines de datos para modelar discos protoplanetarios, caracterizar planetas de Período Ultra Corto (USP) y construir algoritmos de corrección para filtrar falsos positivos de curvas de luz fotométricas complejas.</p>
+            
+            <hr />
+
+            <h3>Publicaciones Destacadas</h3>
+            <p><em>(Publicado bajo Fernando Gutiérrez-Canales / C.F. Gutiérrez-Canales)</em></p>
+            
+            <ul class="alt">
+                <li>
+                    <strong>The young HD 73583 (TOI-560) planetary system: two 10-M⊕ mini-Neptunes transiting a 500-My-old, bright and active K dwarf</strong><br />
+                    <em>Publicado en MNRAS (2022)</em>
+                </li>
+                <li>
+                    <strong>Interpretation of Optical and IR Light Curves for Transitional Disk Candidates in NGC 2264 Using the Extincted Stellar Radiation...</strong><br />
+                    <em>Publicado en RMxAA (2021)</em>
+                </li>
+                <li>
+                    <strong>TESS Re-observes the Young Multi-planet System TOI-451: Refined Ephemeris and Activity Evolution</strong><br />
+                    <em>Publicado en RNAAS (2021)</em>
+                </li>
+                <li>
+                    <strong>Teoría Atómica y Realismo Científico</strong><br />
+                    <em>Publicado en RMF-E</em>
+                </li>
+            </ul>
+            
+            <ul class="actions">
+                <li><a href="/pdfs/CV_spanish.pdf" class="button icon solid fa-download" target="_blank" rel="noreferrer">Descargar CV Completo</a></li>
+            </ul>
+        </article>
+
+        <article id="contact">
+            <h2 class="major">Contacto</h2>
+            <p><strong>Correo:</strong> carl.cfgc@gmail.com</p>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/fernando-guti%C3%A9rrez-canales-804876343/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/Fernando-Canales" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+    </div>
+
+    <footer id="footer">
+        <p>&copy; Fernando Gutiérrez-Canales. Diseño original: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
+
 </div>
-</div>
 
-<nav>
-<ul>
-<li><a href="#about">Sobre mí</a></li>
-<li><a href="#projects">Proyectos</a></li>
-<li><a href="#notes">Notas</a></li>
-<li><a href="#contact">Contacto</a></li>
-</ul>
-</nav>
-</header>
-
-<div id="main">
-<article id="about">
-<h2 class="major">Sobre mí</h2>
-<span class="image main">
-<img src="/images/Fernando_picture.JPG" alt="" />
-</span>
-<p><strong>Educación:</strong> Tengo una licenciatura en Física por la Universidad de Guanajuato y una Maestría en Ciencias (Astrofísica) del Departamento de Astronomía de la misma universidad. También tengo un doctorado en Astrofísica por el Observatorio de París (Université PSL). Realicé el doctorado en dos instituciones diferentes: el Laboratoire d'Instrumentation et de Recherche en Astrophysique (<a href="https://lira.observatoiredeparis.psl.eu/">LIRA</a>) en el campus de Meudon del Observatorio de París y en el departamento de Solar and Stellar Interiors del Max-Planck-Institut für Sonnensystemforschung (<a href="https://www.mps.mpg.de/en">MPS</a>) en Göttingen.</p>
-<p><strong>Intereses de Investigación:</strong> Me interesa el descubrimiento y la caracterización de exoplanetas. Mi <a href="https://cyu.hal.science/tel-05165095/">trabajo de doctorado</a> se centró en el uso de la llamada fotometría de doble apertura para descartar correctamente tránsitos planetarios falsos para la <a href="https://www.esa.int/Science_Exploration/Space_Science/Plato">misión espacial PLATO</a>.</p>
-<p><strong>Intereses:</strong> Actualmente busco oportunidades en ciencia de datos en la industria. Me interesa especialmente aplicar mis habilidades en análisis de datos, aprendizaje automático y modelado estadístico para resolver problemas del mundo real. Estoy abierto a roles que me permitan aprovechar mi experiencia en Python, R y SQL para la toma de decisiones basada en datos. También me interesa explorar mi lado creativo a través de la escritura, ya sea en blogs, poesía o ficción. Me encanta llevar un diario y leer.</p>
-<p><strong>Publicaciones:</strong> <a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Gutierrez%20Canales%2C%20F%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Aquí</a> hay un enlace de ADS con todas mis publicaciones (académicas) hasta ahora.</p>
-</article>
-
-<article id="projects">
-<h2 class="major">Proyectos</h2>
-<span class="image main">
-<img src="/images/project.png" alt="" />
-</span>
-<p>Construyo herramientas y análisis que combinan mi formación en astrofísica con ciencia de datos. Estos son algunos proyectos destacados de mi doctorado y mi bootcamp de Data Analyst.</p>
-<ul>
-	<li><strong><a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">Fotometría de doble apertura de PLATO</a></strong> — Un pipeline de clasificación para distinguir, en el contexto de la misión espacial PLATO, tránsitos planetarios reales de binarias eclipsantes usando fotometría de doble apertura y cambios de centroide. Consulta mi <a href="https://www.aanda.org/articles/aa/full_html/2026/03/aa53294-24/aa53294-24.html" target="_blank" rel="noreferrer">principal publicación doctoral</a> para más detalles.</li>
-	<li><strong>Portafolio del bootcamp de Data Analyst</strong> — Una colección de proyectos de análisis de datos (Python, Pandas, SQL, visualización) que demuestran conclusiones del mundo real y workflows reproducibles. (Enlace a GitHub próximamente.)</li>
-	<li><strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">PLATO's closet</a> </strong> — Una herramienta sencilla para descifrar si un planeta del sistema solar puede ser detectado por la misión espacial PLATO, dado sus requerimientos de signla to noise (SNR).</li>
-    <li><strong>Herramientas de Python</strong> -  para análisis de series temporales, evaluación de aprendizaje automático y limpieza de datos, diseñadas para investigación reproducible y prototipos rápidos</li>
-</ul>
-</article>
-
-<article id="notes">
-<h2 class="major">Notas</h2>
-<span class="image main">
-<img src="/images/note-taking.png" alt="" />
-</span>
-<p>Aún no hay publicaciones. ¡Vuelve pronto!</p>
-</article>
-
-<article id="contact">
-<h2 class="major">Contacto</h2>
-<p><strong>Correo:</strong> carl.cfgc@gmail.com</p>
-<ul class="icons">
-<li><a href="https://www.linkedin.com/in/fernando-guti%C3%A9rrez-canales-804876343/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-<li><a href="https://github.com/Fernando-Canales" class="icon fa-github"><span class="label">GitHub</span></a></li>
-</ul>
-</article>
-
-</div>
-
-<footer id="footer">
-<p>&copy; Fernando Gutierrez Canales. Diseño: <a href="https://html5up.net">HTML5 UP</a>.</p>
-</footer>
-</div>
+<div id="bg"></div>
 
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/browser.min.js"></script>
 <script src="/assets/js/breakpoints.min.js"></script>
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
+
 </body>
-</html>
