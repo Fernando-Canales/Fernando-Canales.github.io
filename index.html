@@ -1,8 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-Simple bilingual personal site (English/Spanish)
-This version is pure static HTML (no Jekyll build required).
--->
 <html>
 <head>
 <title>Fernando Gutiérrez-Canales</title>
@@ -11,12 +7,45 @@ This version is pure static HTML (no Jekyll build required).
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <style>
+    /* Expand the Projects Article to fit a horizontal grid */
+    #main > article#projects {
+        width: 65rem !important; /* Forces the window to be wider */
+        max-width: 100%;
+    }
+
+    /* Filter Buttons */
+    .project-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    .filter-btn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+        color: #ffffff !important;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: none !important; /* Overrides template button styles */
+    }
+    .filter-btn:hover, .filter-btn.active {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border-color: #ffffff !important;
+    }
+
     /* Custom Project Grid Styles */
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 1.5rem;
-        margin-top: 1.5rem;
     }
     .project-card {
         background: rgba(255, 255, 255, 0.05); /* Matches Dimension's glass aesthetic */
@@ -25,11 +54,14 @@ This version is pure static HTML (no Jekyll build required).
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        transition: transform 0.2s ease, background 0.2s ease;
+        transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
     }
     .project-card:hover {
         transform: translateY(-5px);
         background: rgba(255, 255, 255, 0.1);
+    }
+    .project-card.hidden {
+        display: none; /* Used for JS filtering */
     }
     .project-card img {
         width: 100%;
@@ -115,9 +147,15 @@ This version is pure static HTML (no Jekyll build required).
 <article id="projects">
     <h2 class="major" data-i18n="projects.title">Data & Python Projects</h2>
     
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bi">Business Intelligence</button>
+        <button class="filter-btn" data-filter="science">Data Science</button>
+    </div>
+
     <div class="project-grid">
 
-        <div class="project-card">
+        <div class="project-card" data-category="bi">
             <img src="/images/call_me_maybe.png" alt="Call Center Dashboard Preview">
             <div class="project-content">
                 <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
@@ -135,7 +173,7 @@ This version is pure static HTML (no Jekyll build required).
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="science">
             <img src="/images/extended_mask.png" alt="PLATO Space Mission Data">
             <div class="project-content">
                 <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
@@ -153,7 +191,7 @@ This version is pure static HTML (no Jekyll build required).
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="bi">
             <img src="/images/EDA.png" alt="Car Sales EDA Dashboard">
             <div class="project-content">
                 <h3>Interactive US Car Sales EDA Dashboard</h3>
@@ -171,7 +209,7 @@ This version is pure static HTML (no Jekyll build required).
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="science">
             <img src="/images/platos_closet.png" alt="platos_closet Python Package">
             <div class="project-content">
                 <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
@@ -255,4 +293,32 @@ This version is pure static HTML (no Jekyll build required).
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove 'active' class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add 'active' class to the clicked button
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    // Show all if filter is 'all', else show only the matching category
+                    if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
+
 </body>
+</html>
