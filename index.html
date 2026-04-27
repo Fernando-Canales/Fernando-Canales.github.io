@@ -112,48 +112,86 @@ This version is pure static HTML (no Jekyll build required).
             <p>I am now bringing this analytical firepower to the corporate tech sector. Whether it is building interactive Tableau dashboards, developing open-source Python packages, or using A/B testing to optimize business operations, my focus is on building data solutions that drive measurable impact.</p>
         </article>
 
-        <article id="projects">
-            <h2 class="major">Data & Python Projects</h2>
-            
-            <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
-            <p>
-                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Statistics]</code> <code>[Tableau]</code><br />
-                <strong>The Challenge:</strong> A telecom company needed to identify underperforming call center operators and understand the root cause of declining service quality amidst a massive spike in call volume.<br />
-                <strong>The Solution & Impact:</strong> Engineered a custom inefficiency metric across 50,000+ records and conducted statistical hypothesis testing (T-tests). Proved that underperforming agents handled the same call volume as top performers, resulting in a data-driven recommendation to retrain rather than fire staff—saving significant HR turnover costs.<br />
-                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Tableau Dashboard</a>
-            </p>
-            
-            <hr />
+<article id="projects">
+    <h2 class="major" data-i18n="projects.title">Data & Python Projects</h2>
+    
+    <div class="project-grid">
 
-            <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
-            <p>
-                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Data Pipelines]</code> <code>[Signal Processing]</code> <code>[Statistical Modeling]</code><br />
-                <strong>The Challenge:</strong> The European Space Agency's upcoming PLATO mission required a highly accurate, automated method to filter false-positive anomalies out of massive streams of photometric sensor data.<br />
-                <strong>The Solution & Impact:</strong> Engineered and validated a robust anomaly detection algorithm. This methodology was officially adopted into the mission's data pipeline to ensure downstream data integrity and resulted in a first-author publication.<br />
-                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publication</a>
-            </p>
-            
-            <hr />
+        <div class="project-card">
+            <img src="/images/project_callcenter.jpg" alt="Call Center Dashboard Preview">
+            <div class="project-content">
+                <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
+                <p>
+                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[SciPy]</code> <code>[Tableau]</code>
+                </p>
+                <p>
+                    <strong>The Challenge:</strong> Identify underperforming operators and find the root cause of declining service quality amidst a call volume spike.<br><br>
+                    <strong>The Solution:</strong> Engineered a custom inefficiency metric across 50k+ records and used T-tests to prove underperforming agents handled the same call volume as top performers. Recommended retraining over layoffs, saving HR turnover costs.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank" rel="noreferrer">GitHub Repo</a>
+                    <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Tableau Dashboard</a>
+                </div>
+            </div>
+        </div>
 
-            <h3>Interactive US Car Sales EDA Dashboard</h3>
-            <p>
-                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Data Visualization]</code> <code>[Render]</code><br />
-                <strong>The Challenge:</strong> Non-technical stakeholders needed a user-friendly way to explore and extract business insights from a complex dataset of US automobile sales.<br />
-                <strong>The Solution & Impact:</strong> Developed and deployed an interactive web application that empowers users to perform real-time Exploratory Data Analysis (EDA) through dynamic filtering and automated data visualizations.<br />
-                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Live App</a>
-            </p>
-            
-            <hr />
+        <div class="project-card">
+            <img src="/images/project_plato.jpg" alt="PLATO Space Mission Data">
+            <div class="project-content">
+                <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
+                <p>
+                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Data Pipelines]</code> <code>[Signal Processing]</code>
+                </p>
+                <p>
+                    <strong>The Challenge:</strong> The ESA's PLATO mission required an automated method to filter false-positive anomalies out of massive streams of photometric sensor data.<br><br>
+                    <strong>The Solution:</strong> Engineered and validated a robust anomaly detection algorithm that was officially adopted into the mission's data pipeline to ensure downstream data integrity. Resulted in a first-author publication.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">GitHub Repo</a>
+                    <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publication</a>
+                </div>
+            </div>
+        </div>
 
-            <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
-            <p>
-                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[PyPI Packaging]</code> <code>[NumPy]</code> <code>[Sphinx/ReadTheDocs]</code><br />
-                <strong>The Challenge:</strong> Astronomers needed a lightweight, easily accessible tool to evaluate if specific planetary bodies meet the signal-to-noise detection thresholds of the PLATO space mission.<br />
-                <strong>The Solution & Impact:</strong> Developed and published a fully documented, open-source Python package to PyPI. The tool allows researchers to seamlessly calculate transit depths and assess detectability via a simple <code>pip install</code>.<br />
-                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a> | <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Docs</a>
-            </p>
+        <div class="project-card">
+            <img src="/images/project_cars.jpg" alt="Car Sales EDA Dashboard">
+            <div class="project-content">
+                <h3>Interactive US Car Sales EDA Dashboard</h3>
+                <p>
+                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Render]</code>
+                </p>
+                <p>
+                    <strong>The Challenge:</strong> Non-technical stakeholders needed a user-friendly way to explore and extract business insights from a complex dataset of US automobile sales.<br><br>
+                    <strong>The Solution:</strong> Developed and deployed an interactive web application empowering users to perform real-time Exploratory Data Analysis (EDA) through dynamic filtering and automated data visualizations.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">GitHub Repo</a>
+                    <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Live App</a>
+                </div>
+            </div>
+        </div>
 
-        </article>
+        <div class="project-card">
+            <img src="/images/project_package.jpg" alt="platos_closet Python Package">
+            <div class="project-content">
+                <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
+                <p>
+                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[PyPI]</code> <code>[NumPy]</code> <code>[Sphinx]</code>
+                </p>
+                <p>
+                    <strong>The Challenge:</strong> Astronomers needed a lightweight tool to evaluate if specific planetary bodies meet the signal-to-noise detection thresholds of the PLATO mission.<br><br>
+                    <strong>The Solution:</strong> Developed and published a fully documented, open-source Python package to PyPI, allowing researchers to calculate transit depths and assess detectability via a simple pip install.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">GitHub Repo</a>
+                    <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a>
+                    <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Docs</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</article>
 
         <article id="research">
             <h2 class="major">Academic Research</h2>
