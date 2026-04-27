@@ -13,145 +13,149 @@ This version is pure static HTML (no Jekyll build required).
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
-	<a href="/" class="active" aria-current="page">EN</a>
-	<a href="/es/">ES</a>
+    <a href="/" class="active" aria-current="page">EN</a>
+    <a href="/es/">ES</a>
 </div>
 <div id="wrapper">
-<header id="header">
-    <div class="logo">
-        <span class="icon fa-keyboard"></span> </div>
-    <div class="content">
-        <div class="inner">
-            <h1>Fernando Gutiérrez-Canales</h1>
-            <p><strong>Data Analyst & Python Developer</strong> | PhD in Astrophysics<br />
-            Transforming complex data into actionable business insights.</p>
+
+    <header id="header">
+        <div class="content">
+            <div class="inner">
+                <h1>Fernando Gutiérrez-Canales</h1>
+                <img src="/images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
+                <p><strong>Data Analyst & Python Developer</strong> | PhD in Astrophysics<br />
+                Transforming complex data into actionable business insights.</p>
+            </div>
         </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+
+        <article id="about">
+            <h2 class="major">About Me</h2>
+            <span class="image main">
+                <img src="/images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
+            </span>
+            
+            <p>I am a Data Analyst and Python Developer with a PhD in Astrophysics. I specialize in extracting actionable business insights from massive, messy datasets using Python, advanced statistical testing, and modern data visualization tools.</p>
+            
+            <p>During my recently completed PhD between the Paris Observatory and the Max Planck Institute, I developed mission-critical anomaly detection algorithms for the European Space Agency's PLATO space mission. This rigorous academic environment ingrained in me a deep ability to solve highly ambiguous problems, engineer robust data pipelines, and write production-ready code.</p>
+            
+            <p>I am now bringing this analytical firepower to the corporate tech sector. Whether it is building interactive Tableau dashboards, developing open-source Python packages, or using A/B testing to optimize business operations, my focus is on building data solutions that drive measurable impact.</p>
+        </article>
+
+        <article id="projects">
+            <h2 class="major">Data & Python Projects</h2>
+            
+            <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
+            <p>
+                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Statistics]</code> <code>[Tableau]</code><br />
+                <strong>The Challenge:</strong> A telecom company needed to identify underperforming call center operators and understand the root cause of declining service quality amidst a massive spike in call volume.<br />
+                <strong>The Solution & Impact:</strong> Engineered a custom inefficiency metric across 50,000+ records and conducted statistical hypothesis testing (T-tests). Proved that underperforming agents handled the same call volume as top performers, resulting in a data-driven recommendation to retrain rather than fire staff—saving significant HR turnover costs.<br />
+                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank" rel="noreferrer">Tableau Dashboard</a>
+            </p>
+            
+            <hr />
+
+            <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
+            <p>
+                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Data Pipelines]</code> <code>[Signal Processing]</code> <code>[Statistical Modeling]</code><br />
+                <strong>The Challenge:</strong> The European Space Agency's upcoming PLATO mission required a highly accurate, automated method to filter false-positive anomalies out of massive streams of photometric sensor data.<br />
+                <strong>The Solution & Impact:</strong> Engineered and validated a robust anomaly detection algorithm. This methodology was officially adopted into the mission's data pipeline to ensure downstream data integrity and resulted in a first-author publication.<br />
+                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank" rel="noreferrer">Publication</a>
+            </p>
+            
+            <hr />
+
+            <h3>Interactive US Car Sales EDA Dashboard</h3>
+            <p>
+                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Data Visualization]</code> <code>[Render]</code><br />
+                <strong>The Challenge:</strong> Non-technical stakeholders needed a user-friendly way to explore and extract business insights from a complex dataset of US automobile sales.<br />
+                <strong>The Solution & Impact:</strong> Developed and deployed an interactive web application that empowers users to perform real-time Exploratory Data Analysis (EDA) through dynamic filtering and automated data visualizations.<br />
+                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/cars_project" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://cars-project-kjw3.onrender.com/" target="_blank" rel="noreferrer">Live App</a>
+            </p>
+            
+            <hr />
+
+            <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
+            <p>
+                <strong>Tech Stack:</strong> <code>[Python]</code> <code>[PyPI Packaging]</code> <code>[NumPy]</code> <code>[Sphinx/ReadTheDocs]</code><br />
+                <strong>The Challenge:</strong> Astronomers needed a lightweight, easily accessible tool to evaluate if specific planetary bodies meet the signal-to-noise detection thresholds of the PLATO space mission.<br />
+                <strong>The Solution & Impact:</strong> Developed and published a fully documented, open-source Python package to PyPI. The tool allows researchers to seamlessly calculate transit depths and assess detectability via a simple <code>pip install</code>.<br />
+                <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank" rel="noreferrer">GitHub Repo</a> | <a href="https://pypi.org/project/platos-closet/" target="_blank" rel="noreferrer">PyPI</a> | <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank" rel="noreferrer">Docs</a>
+            </p>
+
+        </article>
+
+        <article id="research">
+            <h2 class="major">Academic Research</h2>
+            
+            <span class="image main"><img src="/images/plato_cosmos.jpeg" alt="PLATO Space Mission" /></span>
+            
+            <h3>Space Instrumentation & Exoplanets</h3>
+            <p>Before transitioning to corporate data analytics, my academic career was dedicated to the European Space Agency's <strong>PLATO</strong> mission and the study of extrasolar planets. My research focused on developing data pipelines to model protoplanetary disks, characterize Ultra Short Period (USP) planets, and build correction algorithms to filter false positives out of complex photometric light curves.</p>
+            
+            <hr />
+
+            <h3>Selected Publications</h3>
+            <p><em>(Published under Fernando Gutiérrez-Canales / C.F. Gutiérrez-Canales)</em></p>
+            
+            <ul class="alt">
+                <li>
+                    <strong>The young HD 73583 (TOI-560) planetary system: two 10-M⊕ mini-Neptunes transiting a 500-My-old, bright and active K dwarf</strong><br />
+                    <em>Published in MNRAS (2022)</em>
+                </li>
+                <li>
+                    <strong>Interpretation of Optical and IR Light Curves for Transitional Disk Candidates in NGC 2264 Using the Extincted Stellar Radiation...</strong><br />
+                    <em>Published in RMxAA (2021)</em>
+                </li>
+                <li>
+                    <strong>TESS Re-observes the Young Multi-planet System TOI-451: Refined Ephemeris and Activity Evolution</strong><br />
+                    <em>Published in RNAAS (2021)</em>
+                </li>
+                <li>
+                    <strong>Teoría Atómica y Realismo Científico</strong><br />
+                    <em>Published in RMF-E</em>
+                </li>
+            </ul>
+            
+            <ul class="actions">
+                <li><a href="/pdfs/CV_english.pdf" class="button icon solid fa-download" target="_blank" rel="noreferrer">Download Full CV</a></li>
+            </ul>
+        </article>
+
+        <article id="contact">
+            <h2 class="major">Contact</h2>
+            <p><strong>Email:</strong> carl.cfgc@gmail.com</p>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/fernando-guti%C3%A9rrez-canales-804876343/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/Fernando-Canales" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
     </div>
 
-</header>
+    <footer id="footer">
+        <p>&copy; Fernando Gutiérrez-Canales. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
 
-<nav>
-    <ul>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<div id="main">
-<article id="intro">
-    <h2 class="major" data-i18n="intro.title">About Me</h2>
-    <span class="image main"><img src="images/fer_barcelona_batllo.jpg" alt="Fernando Gutiérrez-Canales" /></span>
-    
-    <p>I am a Data Analyst and Python Developer with a PhD in Astrophysics. I specialize in extracting actionable business insights from massive, messy datasets using Python, advanced statistical testing, and modern data visualization tools.</p>
-    
-    <p>During my recently completed PhD between the Paris Observatory and the Max Planck Institute, I developed mission-critical anomaly detection algorithms for the European Space Agency's PLATO space mission. This rigorous academic environment ingrained in me a deep ability to solve highly ambiguous problems, engineer robust data pipelines, and write production-ready code.</p>
-    
-    <p>I am now bringing this analytical firepower to the corporate tech sector. Whether it is building interactive Tableau dashboards, developing open-source Python packages, or using A/B testing to optimize business operations, my focus is on building data solutions that drive measurable impact.</p>
-</article>
-
-<article id="projects">
-    <h2 class="major" data-i18n="projects.title">Data & Python Projects</h2>
-    
-    <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
-    <p>
-        <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Data Pipelines]</code> <code>[Signal Processing]</code> <code>[Statistical Modeling]</code><br />
-        <strong>The Challenge:</strong> The European Space Agency's upcoming PLATO mission required a highly accurate, automated method to filter false-positive anomalies out of massive streams of photometric sensor data.<br />
-        <strong>The Solution & Impact:</strong> Engineered and validated a robust anomaly detection algorithm. This methodology was officially adopted into the mission's data pipeline to ensure downstream data integrity and resulted in a first-author publication.<br />
-        <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/PLATO_DAP_CS" target="_blank">GitHub Repo</a> | <a href="https://doi.org/10.1051/0004-6361/202453294" target="_blank">Publication</a>
-    </p>
-    
-    <hr />
-
-	<h3>Interactive US Car Sales EDA Dashboard</h3>
-    <p>
-        <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Data Visualization]</code> <code>[Render]</code><br />
-        <strong>The Challenge:</strong> Non-technical stakeholders needed a user-friendly way to explore and extract business insights from a complex dataset of US automobile sales.<br />
-        <strong>The Solution & Impact:</strong> Developed and deployed an interactive web application that empowers users to perform real-time Exploratory Data Analysis (EDA) through dynamic filtering and automated data visualizations.<br />
-        <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/cars_project" target="_blank">GitHub Repo</a> | <a href="https://cars-project-kjw3.onrender.com/" target="_blank">Live App</a>
-    </p>
-    
-    <hr />
-
-	<h3>Open-Source Planetary Detection Package (platos_closet)</h3>
-    <p>
-        <strong>Tech Stack:</strong> <code>[Python]</code> <code>[PyPI Packaging]</code> <code>[NumPy]</code> <code>[Sphinx/ReadTheDocs]</code><br />
-        <strong>The Challenge:</strong> Astronomers needed a lightweight, easily accessible tool to evaluate if specific planetary bodies meet the signal-to-noise detection thresholds of the PLATO space mission.<br />
-        <strong>The Solution & Impact:</strong> Developed and published a fully documented, open-source Python package to PyPI. The tool allows researchers to seamlessly calculate transit depths and assess detectability via a simple <code>pip install</code>.<br />
-        <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/platos_closet" target="_blank">GitHub Repo</a> | <a href="https://pypi.org/project/platos-closet/" target="_blank">PyPI</a> | <a href="https://platos-closet.readthedocs.io/en/latest/" target="_blank">Docs</a>
-    </p>
-    
-    <hr />
-
-    <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
-    <p>
-        <strong>Tech Stack:</strong> <code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Statistics]</code> <code>[Tableau]</code><br />
-        <strong>The Challenge:</strong> A telecom company needed to identify underperforming call center operators and understand the root cause of declining service quality amidst a massive spike in call volume.<br />
-        <strong>The Solution & Impact:</strong> Engineered a custom inefficiency metric across 50,000+ records and conducted statistical hypothesis testing (T-tests). Proved that underperforming agents handled the same call volume as top performers, resulting in a data-driven recommendation to retrain rather than fire staff—saving significant HR turnover costs.<br />
-        <strong>Links:</strong> <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank">GitHub Repo</a> | <a href="https://public.tableau.com/views/Dashboard_proyecto_final_tripleten_Fernando_Gutierrez/DashboardCallmeMaybe" target="_blank">Tableau Dashboard</a>
-    </p>
-    
-    <hr />
-
-    </article>
-
-<article id="research">
-    <h2 class="major">Academic Research</h2>
-    
-    <span class="image main"><img src="images/plato_cosmos.jpeg" alt="PLATO Space Mission" /></span>
-    
-    <h3>Space Instrumentation & Exoplanets</h3>
-    <p>Before transitioning to corporate data analytics, my academic career was dedicated to the European Space Agency's <strong>PLATO</strong> mission and the study of extrasolar planets. My research focused on developing data pipelines to model protoplanetary disks, characterize Ultra Short Period (USP) planets, and build correction algorithms to filter false positives out of complex photometric light curves.</p>
-    
-    <hr />
-
-    <h3>Selected Publications</h3>
-    <p><em>(Published under Fernando Gutiérrez-Canales / C.F. Gutiérrez-Canales)</em></p>
-    
-    <ul class="alt">
-        <li>
-            <strong>The young HD 73583 (TOI-560) planetary system: two 10-M⊕ mini-Neptunes transiting a 500-My-old, bright and active K dwarf</strong><br />
-            <em>Published in MNRAS (2022)</em>
-        </li>
-        <li>
-            <strong>Interpretation of Optical and IR Light Curves for Transitional Disk Candidates in NGC 2264 Using the Extincted Stellar Radiation...</strong><br />
-            <em>Published in RMxAA (2021)</em>
-        </li>
-        <li>
-            <strong>TESS Re-observes the Young Multi-planet System TOI-451: Refined Ephemeris and Activity Evolution</strong><br />
-            <em>Published in RNAAS (2021)</em>
-        </li>
-        <li>
-            <strong>Teoría Atómica y Realismo Científico</strong><br />
-            <em>Published in RMF-E</em>
-        </li>
-    </ul>
-    
-    <ul class="actions">
-        <li><a href="pdfs/CV_english.pdf" class="button icon solid fa-download" target="_blank">Download Full CV</a></li>
-    </ul>
-</article>
-
-<article id="contact">
-<h2 class="major">Contact</h2>
-<p><strong>Email:</strong> carl.cfgc@gmail.com</p>
-<ul class="icons">
-<li><a href="https://www.linkedin.com/in/fernando-guti%C3%A9rrez-canales-804876343/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-<li><a href="https://github.com/Fernando-Canales" class="icon fa-github"><span class="label">GitHub</span></a></li>
-</ul>
-</article>
 </div>
 
-<footer id="footer">
-<p>&copy; Fernando Gutierrez Canales. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-</footer>
-</div>
+<div id="bg"></div>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
 </body>
-</html>
