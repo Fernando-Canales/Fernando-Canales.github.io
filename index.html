@@ -10,6 +10,65 @@ This version is pure static HTML (no Jekyll build required).
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<style>
+    /* Custom Project Grid Styles */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .project-card {
+        background: rgba(255, 255, 255, 0.05); /* Matches Dimension's glass aesthetic */
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .project-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .project-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .project-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+    .project-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    .project-links {
+        margin-top: auto; /* Pushes links to the bottom so cards align evenly */
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .project-links a {
+        font-size: 0.85rem;
+        font-weight: bold;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+    .project-links a:hover {
+        border-bottom-color: transparent;
+    }
+</style>
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
