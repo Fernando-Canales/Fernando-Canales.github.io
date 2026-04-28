@@ -141,8 +141,8 @@
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
-    <a href="/" class="active" aria-current="page">EN</a>
-    <a href="/es/">ES</a>
+    <a href="#" class="active" aria-current="page">EN</a>
+    <a href="es/">ES</a>
 </div>
 <div id="wrapper">
 
@@ -150,7 +150,7 @@
         <div class="content">
             <div class="inner">
                 <h1>Fernando Gutiérrez-Canales</h1>
-                <img src="/images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
+                <img src="images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
                 <p><strong>Data Analyst & Python Developer</strong> | PhD in Astrophysics<br />
                 Transforming complex data into actionable business insights.</p>
             </div>
@@ -171,7 +171,7 @@
         <article id="about">
             <h2 class="major">About Me</h2>
             <span class="image main">
-                <img src="/images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
+                <img src="images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
             </span>
             
             <p>I am a Data Analyst and Python Developer with a PhD in Astrophysics. I specialize in extracting actionable business insights from massive, messy datasets using Python, advanced statistical testing, and modern data visualization tools.</p>
@@ -193,7 +193,7 @@
     <div class="project-grid">
 
         <div class="project-card" data-category="bi">
-            <img src="/images/call_me_maybe.png" alt="Call Center Dashboard Preview">
+            <img src="images/call_me_maybe.png" alt="Call Center Dashboard Preview">
             <div class="project-content">
                 <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
                 
@@ -217,7 +217,7 @@
         </div>
 
         <div class="project-card" data-category="science">
-            <img src="/images/extended_mask.png" alt="PLATO Space Mission Data">
+            <img src="images/extended_mask.png" alt="PLATO Space Mission Data">
             <div class="project-content">
                 <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
                 
@@ -240,7 +240,7 @@
         </div>
 
         <div class="project-card" data-category="bi">
-            <img src="/images/EDA.png" alt="Car Sales EDA Dashboard">
+            <img src="images/EDA.png" alt="Car Sales EDA Dashboard">
             <div class="project-content">
                 <h3>Interactive US Car Sales EDA Dashboard</h3>
                 
@@ -264,7 +264,7 @@
         </div>
 
         <div class="project-card" data-category="science">
-            <img src="/images/platos_closet.png" alt="platos_closet Python Package">
+            <img src="images/platos_closet.png" alt="platos_closet Python Package">
             <div class="project-content">
                 <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
                 
@@ -294,7 +294,7 @@
         <article id="research">
             <h2 class="major">Academic Research</h2>
             
-            <span class="image main"><img src="/images/plato_cosmos.jpeg" alt="PLATO Space Mission" /></span>
+            <span class="image main"><img src="images/plato_cosmos.jpeg" alt="PLATO Space Mission" /></span>
             
             <h3>Space Instrumentation & Exoplanets</h3>
             <p>Before transitioning to corporate data analytics, my academic career was dedicated to the European Space Agency's <strong>PLATO</strong> mission and the study of extrasolar planets. My research focused on developing data pipelines to model protoplanetary disks, characterize Ultra Short Period (USP) planets, and build correction algorithms to filter false positives out of complex photometric light curves.</p>
@@ -312,3 +312,73 @@
                 <li>
                     <strong>Interpretation of Optical and IR Light Curves for Transitional Disk Candidates in NGC 2264 Using the Extincted Stellar Radiation...</strong><br />
                     <em>Published in RMxAA (2021)</em>
+                </li>
+                <li>
+                    <strong>TESS Re-observes the Young Multi-planet System TOI-451: Refined Ephemeris and Activity Evolution</strong><br />
+                    <em>Published in RNAAS (2021)</em>
+                </li>
+                <li>
+                    <strong>Teoría Atómica y Realismo Científico</strong><br />
+                    <em>Published in RMF-E</em>
+                </li>
+            </ul>
+            
+            <ul class="actions">
+                <li><a href="pdfs/CV_english.pdf" class="button icon solid fa-download" target="_blank" rel="noreferrer">Download Full CV</a></li>
+            </ul>
+        </article>
+
+        <article id="contact">
+            <h2 class="major">Contact</h2>
+            <p><strong>Email:</strong> carl.cfgc@gmail.com</p>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/fernando-guti%C3%A9rrez-canales-804876343/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/Fernando-Canales" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+    </div>
+
+    <footer id="footer">
+        <p>&copy; Fernando Gutiérrez-Canales. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
+
+</div>
+
+<div id="bg"></div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove 'active' class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add 'active' class to the clicked button
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    // Show all if filter is 'all', else show only the matching category
+                    if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
