@@ -384,5 +384,23 @@
     });
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Find the language link that is NOT currently active
+        const langLinks = document.querySelectorAll('.language-selector a:not(.active)');
+
+        langLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Stop the standard link behavior
+                const targetUrl = this.getAttribute('href'); // Gets "es/" or "../"
+                const currentHash = window.location.hash; // Gets "#projects" or "#about" if open
+                
+                // Redirect to the new language + the currently open window
+                window.location.href = targetUrl + currentHash; 
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
