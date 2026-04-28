@@ -101,6 +101,37 @@
         border-bottom-color: transparent;
     }
 </style>
+
+/* Tech Stack Badges */
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .tech-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    /* Brand Colors */
+    .badge-python { background-color: #3776AB; }
+    .badge-pandas { background-color: #150458; }
+    .badge-scipy { background-color: #0054A6; }
+    .badge-tableau { background-color: #E97627; }
+    .badge-streamlit { background-color: #FF4B4B; }
+    .badge-render { background-color: #46E3B7; color: #000000; text-shadow: none; }
+    .badge-pypi { background-color: #3775A9; }
+    .badge-numpy { background-color: #013243; }
+    .badge-sphinx { background-color: #100E0E; border: 1px solid #ffffff; }
+    .badge-generic { background-color: #6c757d; }
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
@@ -159,9 +190,14 @@
             <img src="/images/call_me_maybe.png" alt="Call Center Dashboard Preview">
             <div class="project-content">
                 <h3>Call Center Inefficiency Analysis & Hypothesis Testing</h3>
-                <p>
-                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[SciPy]</code> <code>[Tableau]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pandas">Pandas</span>
+                    <span class="tech-badge badge-scipy">SciPy</span>
+                    <span class="tech-badge badge-tableau">Tableau</span>
+                </div>
+
                 <p>
                     <strong>The Challenge:</strong> Identify underperforming operators and find the root cause of declining service quality amidst a call volume spike.<br><br>
                     <strong>The Solution:</strong> Engineered a custom inefficiency metric across 50k+ records and used T-tests to prove underperforming agents handled the same call volume as top performers. Recommended retraining over layoffs, saving HR turnover costs.
@@ -177,9 +213,13 @@
             <img src="/images/extended_mask.png" alt="PLATO Space Mission Data">
             <div class="project-content">
                 <h3>Anomaly Detection Pipeline for ESA's PLATO Mission</h3>
-                <p>
-                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Data Pipelines]</code> <code>[Signal Processing]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-generic">Data Pipelines</span>
+                    <span class="tech-badge badge-generic">Signal Processing</span>
+                </div>
+
                 <p>
                     <strong>The Challenge:</strong> The ESA's PLATO mission required an automated method to filter false-positive anomalies out of massive streams of photometric sensor data.<br><br>
                     <strong>The Solution:</strong> Engineered and validated a robust anomaly detection algorithm that was officially adopted into the mission's data pipeline to ensure downstream data integrity. Resulted in a first-author publication.
@@ -195,9 +235,14 @@
             <img src="/images/EDA.png" alt="Car Sales EDA Dashboard">
             <div class="project-content">
                 <h3>Interactive US Car Sales EDA Dashboard</h3>
-                <p>
-                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Render]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pandas">Pandas</span>
+                    <span class="tech-badge badge-streamlit">Streamlit</span>
+                    <span class="tech-badge badge-render">Render</span>
+                </div>
+
                 <p>
                     <strong>The Challenge:</strong> Non-technical stakeholders needed a user-friendly way to explore and extract business insights from a complex dataset of US automobile sales.<br><br>
                     <strong>The Solution:</strong> Developed and deployed an interactive web application empowering users to perform real-time Exploratory Data Analysis (EDA) through dynamic filtering and automated data visualizations.
@@ -213,9 +258,14 @@
             <img src="/images/platos_closet.png" alt="platos_closet Python Package">
             <div class="project-content">
                 <h3>Open-Source Planetary Detection Package (platos_closet)</h3>
-                <p>
-                    <strong>Tech Stack:</strong> <br><code>[Python]</code> <code>[PyPI]</code> <code>[NumPy]</code> <code>[Sphinx]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pypi">PyPI</span>
+                    <span class="tech-badge badge-numpy">NumPy</span>
+                    <span class="tech-badge badge-sphinx">Sphinx</span>
+                </div>
+
                 <p>
                     <strong>The Challenge:</strong> Astronomers needed a lightweight tool to evaluate if specific planetary bodies meet the signal-to-noise detection thresholds of the PLATO mission.<br><br>
                     <strong>The Solution:</strong> Developed and published a fully documented, open-source Python package to PyPI, allowing researchers to calculate transit depths and assess detectability via a simple pip install.
