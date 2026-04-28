@@ -1,20 +1,148 @@
 <!DOCTYPE HTML>
-<!--
-Sitio personal bilingüe (español)
-Esta versión es HTML estático (no requiere compilación de Jekyll).
--->
 <html>
 <head>
-<title>Fernando Gutierrez Canales</title>
+<title>Fernando Gutiérrez-Canales</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="/assets/css/main.css" />
-<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+<link rel="stylesheet" href="../assets/css/main.css" />
+<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+<style>
+    /* Ensanchar el artículo de Proyectos para la cuadrícula horizontal */
+    #main > article#projects {
+        width: 65rem !important;
+        max-width: 100%;
+    }
+
+    /* Botones de Filtro */
+    .project-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    .filter-btn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+        color: #ffffff !important;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: none !important;
+    }
+    .filter-btn:hover, .filter-btn.active {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border-color: #ffffff !important;
+    }
+
+    /* Estilos de la Cuadrícula (Grid) */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    .project-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .project-card.hidden {
+        display: none;
+    }
+    .project-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .project-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .project-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+    .project-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    .project-links {
+        margin-top: auto;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .project-links a {
+        font-size: 0.85rem;
+        font-weight: bold;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+    .project-links a:hover {
+        border-bottom-color: transparent;
+    }
+
+    /* Etiquetas del Stack Tecnológico */
+    .tech-stack {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+    }
+    .tech-stack strong {
+        margin-right: 0.2rem;
+        color: #ffffff;
+    }
+    .tech-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    /* Colores de las Etiquetas */
+    .badge-python { background-color: #3776AB; }
+    .badge-pandas { background-color: #150458; }
+    .badge-scipy { background-color: #0054A6; }
+    .badge-tableau { background-color: #E97627; }
+    .badge-streamlit { background-color: #FF4B4B; }
+    .badge-render { background-color: #46E3B7; color: #000000; text-shadow: none; }
+    .badge-pypi { background-color: #3775A9; }
+    .badge-numpy { background-color: #013243; }
+    .badge-sphinx { background-color: #100E0E; border: 1px solid #ffffff; }
+    .badge-generic { background-color: #6c757d; }
+</style>
 </head>
 <body class="is-preload">
 <div class="language-selector" aria-label="Language switcher">
-    <a href="/">EN</a>
-    <a href="/es/" class="active" aria-current="page">ES</a>
+    <a href="../index.html">EN</a>
+    <a href="#" class="active" aria-current="page">ES</a>
 </div>
 <div id="wrapper">
 
@@ -22,7 +150,7 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
         <div class="content">
             <div class="inner">
                 <h1>Fernando Gutiérrez-Canales</h1>
-                <img src="/images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
+                <img src="../images/Astronomy.jpg" style="width:280px; height:280px; object-fit: cover;" alt="Fernando Gutiérrez-Canales" />
                 <p><strong>Analista de Datos y Desarrollador Python</strong> | Doctor en Astrofísica<br />
                 Transformando datos complejos en soluciones de negocio y valor medible.</p>
             </div>
@@ -43,7 +171,7 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
         <article id="about">
             <h2 class="major">Sobre mí</h2>
             <span class="image main">
-                <img src="/images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
+                <img src="../images/Fernando_picture.JPG" alt="Fernando Gutiérrez-Canales" />
             </span>
             
             <p>Soy un Analista de Datos y Desarrollador Python con un Doctorado en Astrofísica. Me especializo en extraer conclusiones de negocio a partir de conjuntos de datos masivos y complejos, utilizando Python, pruebas estadísticas avanzadas y herramientas modernas de visualización de datos.</p>
@@ -56,18 +184,30 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
 <article id="projects">
     <h2 class="major">Proyectos de Datos y Python</h2>
     
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="bi">Business Intelligence</button>
+        <button class="filter-btn" data-filter="science">Ciencia de Datos</button>
+    </div>
+
     <div class="project-grid">
 
-        <div class="project-card">
-            <img src="/images/project_callcenter.jpg" alt="Vista previa del Dashboard de Call Center">
+        <div class="project-card" data-category="bi">
+            <img src="../images/call_me_maybe.png" alt="Vista previa del Dashboard de Call Center">
             <div class="project-content">
                 <h3>Análisis de Ineficacia en Call Center y Pruebas de Hipótesis</h3>
-                <p>
-                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[SciPy/Estadística]</code> <code>[Tableau]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <strong>Stack Tecnológico:</strong>
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pandas">Pandas</span>
+                    <span class="tech-badge badge-scipy">SciPy</span>
+                    <span class="tech-badge badge-tableau">Tableau</span>
+                </div>
+
                 <p>
                     <strong>El Desafío:</strong> Identificar a los operadores con bajo rendimiento y comprender la causa raíz de la disminución en la calidad del servicio tras un pico masivo en el volumen de llamadas.<br><br>
-                    <strong>La Solución:</strong> Diseñé una métrica de ineficacia analizando más de 50,000 registros y realicé pruebas de hipótesis (Pruebas T). Demostré que los agentes con "bajo rendimiento" manejaban el mismo volumen de llamadas que los mejores. Recomendé re-capacitación en lugar de despidos, ahorrando significativos costos de rotación.
+                    <strong>La Solución:</strong> Diseñé una métrica de ineficacia analizando más de 50,000 registros y realicé pruebas de hipótesis estadísticas (Pruebas T). Demostré que los agentes con "bajo rendimiento" manejaban el mismo volumen de llamadas que los mejores. Recomendé re-capacitación en lugar de despidos, ahorrando significativos costos de rotación.
                 </p>
                 <div class="project-links">
                     <a href="https://github.com/Fernando-Canales/call_me_maybe" target="_blank" rel="noreferrer">Repositorio en GitHub</a>
@@ -76,13 +216,18 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             </div>
         </div>
 
-        <div class="project-card">
-            <img src="/images/project_plato.jpg" alt="Datos de la Misión Espacial PLATO">
+        <div class="project-card" data-category="science">
+            <img src="../images/extended_mask.png" alt="Datos de la Misión Espacial PLATO">
             <div class="project-content">
-                <h3>Pipeline de Detección de Anomalías para la Misión PLATO de la ESA</h3>
-                <p>
-                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Data Pipelines]</code> <code>[Procesamiento de Señales]</code>
-                </p>
+                <h3>Pipeline de Detección de Anomalías para la Misión PLATO</h3>
+                
+                <div class="tech-stack">
+                    <strong>Stack Tecnológico:</strong>
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-generic">Data Pipelines</span>
+                    <span class="tech-badge badge-generic">Procesamiento de Señales</span>
+                </div>
+
                 <p>
                     <strong>El Desafío:</strong> La futura misión espacial PLATO de la ESA requería un método automatizado y de alta precisión para filtrar "falsos positivos" de enormes flujos de datos de sensores fotométricos.<br><br>
                     <strong>La Solución:</strong> Diseñé y validé un algoritmo robusto de detección de anomalías. Esta metodología fue adoptada oficialmente en el pipeline de datos de la misión para garantizar la integridad de los datos y resultó en una publicación científica como primer autor.
@@ -94,13 +239,19 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             </div>
         </div>
 
-        <div class="project-card">
-            <img src="/images/project_cars.jpg" alt="Dashboard EDA de Ventas de Autos">
+        <div class="project-card" data-category="bi">
+            <img src="../images/EDA.png" alt="Dashboard EDA de Ventas de Autos">
             <div class="project-content">
-                <h3>Dashboard Interactivo de Análisis de Ventas de Automóviles (EDA)</h3>
-                <p>
-                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[Pandas]</code> <code>[Streamlit]</code> <code>[Render]</code>
-                </p>
+                <h3>Dashboard Interactivo de Ventas de Automóviles (EDA)</h3>
+                
+                <div class="tech-stack">
+                    <strong>Stack Tecnológico:</strong>
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pandas">Pandas</span>
+                    <span class="tech-badge badge-streamlit">Streamlit</span>
+                    <span class="tech-badge badge-render">Render</span>
+                </div>
+
                 <p>
                     <strong>El Desafío:</strong> Los stakeholders no técnicos necesitaban una forma intuitiva de explorar y extraer información valiosa de negocio a partir de un conjunto de datos complejo sobre ventas de automóviles.<br><br>
                     <strong>La Solución:</strong> Desarrollé y desplegué una aplicación web interactiva que permite a los usuarios realizar un Análisis Exploratorio de Datos (EDA) en tiempo real, mediante el uso de filtros dinámicos y visualizaciones automatizadas.
@@ -112,13 +263,19 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             </div>
         </div>
 
-        <div class="project-card">
-            <img src="/images/project_package.jpg" alt="Paquete Python platos_closet">
+        <div class="project-card" data-category="science">
+            <img src="../images/platos_closet.png" alt="Paquete Python platos_closet">
             <div class="project-content">
                 <h3>Paquete Open-Source de Detección Planetaria (platos_closet)</h3>
-                <p>
-                    <strong>Stack Tecnológico:</strong> <br><code>[Python]</code> <code>[PyPI]</code> <code>[NumPy]</code> <code>[Sphinx]</code>
-                </p>
+                
+                <div class="tech-stack">
+                    <strong>Stack Tecnológico:</strong>
+                    <span class="tech-badge badge-python">Python</span>
+                    <span class="tech-badge badge-pypi">PyPI</span>
+                    <span class="tech-badge badge-numpy">NumPy</span>
+                    <span class="tech-badge badge-sphinx">Sphinx</span>
+                </div>
+
                 <p>
                     <strong>El Desafío:</strong> La comunidad astronómica necesitaba una herramienta ligera y accesible para evaluar matemáticamente si ciertos planetas cumplían con los umbrales de detección de la misión PLATO.<br><br>
                     <strong>La Solución:</strong> Desarrollé, empaqueté y publiqué un paquete de Python de código abierto en PyPI. La herramienta permite a los investigadores evaluar la detectabilidad de los planetas a través de un simple <code>pip install</code>.
@@ -137,7 +294,7 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
         <article id="research">
             <h2 class="major">Investigación Académica</h2>
             
-            <span class="image main"><img src="/images/plato_cosmos.jpeg" alt="Misión Espacial PLATO" /></span>
+            <span class="image main"><img src="../images/plato_cosmos.jpeg" alt="Misión Espacial PLATO" /></span>
             
             <h3>Instrumentación Espacial y Exoplanetas</h3>
             <p>Antes de hacer la transición al análisis de datos corporativo, mi carrera académica estuvo dedicada a la misión espacial <strong>PLATO</strong> de la Agencia Espacial Europea y al estudio de planetas extrasolares. Mi investigación se centró en el desarrollo de pipelines de datos para modelar discos protoplanetarios, caracterizar planetas de Período Ultra Corto (USP) y construir algoritmos de corrección para filtrar falsos positivos de curvas de luz fotométricas complejas.</p>
@@ -148,6 +305,10 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             <p><em>(Publicado bajo Fernando Gutiérrez-Canales / C.F. Gutiérrez-Canales)</em></p>
             
             <ul class="alt">
+                <li>
+                    <strong>Detecting False Positives with PLATO using double-aperture photometry and centroid shifts</strong><br />
+                    <em>Publicado en A&A (2026)</em>
+                </li>
                 <li>
                     <strong>The young HD 73583 (TOI-560) planetary system: two 10-M⊕ mini-Neptunes transiting a 500-My-old, bright and active K dwarf</strong><br />
                     <em>Publicado en MNRAS (2022)</em>
@@ -167,7 +328,7 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
             </ul>
             
             <ul class="actions">
-                <li><a href="/pdfs/CV_spanish.pdf" class="button icon solid fa-download" target="_blank" rel="noreferrer">Descargar CV Completo</a></li>
+                <li><a href="../pdfs/CV_spanish.pdf" class="button icon solid fa-download" target="_blank" rel="noreferrer">Descargar CV Completo</a></li>
             </ul>
         </article>
 
@@ -190,10 +351,38 @@ Esta versión es HTML estático (no requiere compilación de Jekyll).
 
 <div id="bg"></div>
 
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/browser.min.js"></script>
-<script src="/assets/js/breakpoints.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Quitar clase 'active' de todos los botones
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Añadir clase 'active' al botón clickeado
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    // Mostrar todos si el filtro es 'all', sino mostrar solo la categoría correspondiente
+                    if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
 
 </body>
+</html>
